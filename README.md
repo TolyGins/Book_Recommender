@@ -25,8 +25,8 @@ The application URL is http://bookrecommender.us-west-1.elasticbeanstalk.com. I 
 
 ### Input
 
-(https://github.com/TolyGins/BookRecommender/Static/Book_Reccomender_Input.png)
+(https://github.com/TolyGins/Book_Recommender/Static/Book_Reccomender_Input.png)
 
 ### Output
 
-(https://github.com/TolyGins/BookRecommender/Static/Book_Reccomender_Output.png)
+(https://github.com/TolyGins/Book_Recommender/Static/Book_Reccomender_Output.png)
