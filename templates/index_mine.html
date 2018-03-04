@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> Data Collector App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Collecting Books</h1>
+        <h3> Add a few books into the search fields to get personalized recommendations</h3>
+        <div class="returned_data"> {{text | safe}} </div> <br>
+        <form action="" method="POST"  >
+          <textarea title="Your data is safe with us...que evil laugh" placeholder="Enter the last few novels you've read" type="search" name="book_name" required></textarea> <br>     
+          <h1> Rating</h1>
+          <SELECT name="rating" required class = "add_button">
+          <option value= '' selected>Select a Rating </option>  
+          <option value= 5 > 5 </option>
+          <option value= 4 > 4 </option>
+          <option value= 3 > 3 </option>
+          <option value= 2 > 2 </option>
+          <option value= 1 > 1 </option>
+          </SELECT> 
+
+        <!--   <input type="radio" placeholder = "Loved it!" name="rating" value= 5 > 5 <br>
+          <input type="radio" name="rating" value= 4 > 4 <br>
+          <input type="radio" name="rating" value= 3 > 3 <br>  
+          <input type="radio" name="rating" value= 2 > 2 <br>  
+          <input type="radio" name="rating" value= 1 > 1 <br>   -->
+          <!-- <button type ="submit"  value = "add_button"> Add Book </button> -->
+          <button class= "add_button" type="submit" name = 'add_button'> Add Book </button> <br><br><br>
+          <p class = "return_data" Your current booklist is {{value}} </p>
+          </form>
+          <form action = "{{url_for('success')}}" method = "POST"> 
+          <button class ="submit_button" type="submit" name='submit_button'  value = "submit" > Get My Recommendations </button>
+          </form>
+        <!-- </form> -->
+      </div>
+    </body>
+</html>

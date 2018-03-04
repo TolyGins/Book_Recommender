@@ -1,0 +1,128 @@
+html, body {
+  height: auto !important ;
+  margin: 0;
+
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #FDFEFE;
+  color: #17202A; 
+  overflow:hidden;
+  text-align: center;
+}
+
+.container h1 {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: #01060C;
+  margin-top: 80px;
+}
+
+
+
+.container textarea {
+  width: 400px;
+  height: 20px;
+  font-size: 20px;
+  margin: 2px;
+  padding: 20px;
+  line-height: 1.0em;
+  min-height: 20px;
+  min-width: 400px;
+/*  transition: all 0.2s ease-in-out;*/
+}
+
+
+
+.add_button {
+  width:140px;
+  height: 50px;
+  background-color: steelblue;
+  margin: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+ 
+}
+
+
+.submit_button {
+  width:280px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  margin: 3px;
+}
+
+
+
+.success-message {
+  margin: 100px;
+  color: #17202A;
+  font-size: 15px;
+}
+
+.returned_data {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color:  #ff9999;
+  transition: all 0.2s ease-in-out; 
+  text-align: center;
+}
+
+.returned_data span{
+  display: block;
+}
+
+.container_success{
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #FDFEFE;
+  color: #17202A; 
+  overflow:hidden;
+  text-align: center;
+  float: left;
+
+}
+
+.nav3 {
+  position: relative;
+  text-align: center;
+}
+
+/*this is the image itself*/
+.icon{
+display:inline-block;
+float:center; 
+margin-right:2%; 
+margin-bottom:5%; 
+text-align: center;
+width: 48%;
+position: relative;
+}
+
+/*this is price text*/
+.centered {
+  position: absolute;
+  bottom: -25px;
+  left: 32%;
+  float: center;
+}
+
+/*amazon button*/
+.centered img{
+width: auto;
+height: 40px;
+float: center;
+text-align: center;
+
+
+
