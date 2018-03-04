@@ -29,20 +29,14 @@ books_dict, stop_words = pickle.load(pickle_book), pickle.load(pickle_words)
 #{'8353': [nan, 'The King', 'Author']}
 image_dict  = json.load(json_image)# this dictionary is based on book number lookup
 
-# for book_name, value in books_dict.iteritems():
-#     image_dict[str (value[0])]= [value[5], book_name, value[7]] 
 
-
-# this convers book6738 to 6738
+# this converts book6738 to 6738
 def convert_to_num (book_recs):
     book_list = []
     for i in book_recs:
         book_list.append (i[0].replace('book', '')) # remove book and leave number
     return book_list
 
-
-# def similar (word):
-#     return difflib.get_close_matches(word, books_dict.keys(), n=6, cutoff=.5) # gets  highest matches
 
 def similar (word):
     word = titlecase(word)
@@ -58,7 +52,7 @@ def book_return (book):
     if book in books_dict:
         num_wrongs = 0 #resets
         return book, books_dict[book][0]
-    if len(similar(book))>0 and num_wrongs <= 2: # allows user to make 2 mistakes
+    if len(similar(book))>0 and num_wrongs <= 3: # allows user to make 3 mistakes
         num_wrongs +=1
         return "<span> Copy and paste the exact title without quotes </span> Did you mean {}? ".format(similar(book)) 
     else:
@@ -116,19 +110,7 @@ def success():
           urls = generate_images(my_recs, image_dict)
           print len (urls)
           return render_template("success.html", value = ','.join(my_recs), urls = urls)
-       #return redirect(url_for('index'))   
-
-
-    #return redirect(url_for('success'))
-
-    #"Book List Submitted {}".format(book_list))
-    #return render_template("success.html", text = "Book List Submitted{}".format(book_list))
-    
-
-	#return render_template("success.html",)
-    #return render_template('index_mine.html', text="Seems like we got something from that email once!")
-#success([])
-
+  
 
 if __name__ == '__main__':
     #app.debug=True
