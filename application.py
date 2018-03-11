@@ -95,8 +95,8 @@ def success():
           my_recs = user_input.convert_to_num(generate_recommendations.generate_list(generate_recommendations.handler_template_final()))
           print 'recs are', my_recs
           #initializes the object
-          Amazon_Api = amazon_api(list_of_numbers = my_recs, some_dict = data.image_dict, number_of_recs = 6)
-          urls = Amazon_Api.generate_images()
+          amazon_api = Amazon_Api(list_of_numbers = my_recs, some_dict = data.image_dict, number_of_recs = 6)
+          urls = amazon_api.generate_images()
           print len (urls)
           return render_template("success.html", value = ','.join(my_recs), urls = urls)
   

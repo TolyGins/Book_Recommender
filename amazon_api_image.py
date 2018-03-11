@@ -2,7 +2,7 @@
 # Need to add credentials file to the base directory. Make sure the file name is hidden ".amazon-something"
 from amazonproduct import API # needs module lxml
 
-class amazon_api :
+class Amazon_Api :
     """ This class connects to Amazon Product API and Pulls images, links and price into the application"""
     def __init__(self, some_dict, list_of_numbers, number_of_recs):
         self.api = API(locale='us', )
